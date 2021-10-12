@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+
+import ellipsisIcon from '../../assets/icon-ellipsis.svg'; 
+
 import exerciseIcon from '../../assets/icon-exercise.svg';
 import workIcon from '../../assets/icon-work.svg';
 import playIcon from '../../assets/icon-play.svg';
@@ -51,6 +54,13 @@ export const Container = styled.div`
     flex-direction: column;
     padding: 1.5rem 1rem;
 
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--desaturated-blue);
+    }
+
     .first__section {
       display: flex;
       justify-content: space-between;
@@ -58,8 +68,22 @@ export const Container = styled.div`
       font-weight: 500;
 
       button {
+        height: 1.5rem;
+        width: 1.5rem;
         border: none;
-        background: none;
+
+        cursor: pointer;
+
+        background-color: var(--pale-blue);
+        background-position: center;
+        mask: url(${ellipsisIcon})  no-repeat center;
+
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: white;
+        }
+
       }
     }
 
@@ -71,16 +95,8 @@ export const Container = styled.div`
 
       .time {
         font-size: 2rem;
+        color: white;
       }
     }
   } 
 `;
-
-// .card__container > .card__content > .current__content > .title{
-//   font-weight: 500;
-// } 
-
-// .card__container > .card__content > .current__content > .time{
-//   font-weight: 300;
-//   font-size: 1.5rem;
-// } 
