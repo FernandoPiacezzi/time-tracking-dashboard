@@ -20,11 +20,11 @@
   box-sizing: border-box;
 }
 
-html,
+/* html,
 body,
 #root {
   height: 100vh;
-}
+} */
 
 body {
   background: var(--very-dark-blue);
@@ -45,12 +45,13 @@ textarea {
   color: var(--pale-blue);
 }
 
-@media (min-width: 700px) {
-  :root {
-    font-size: 62.5%;
-  }
-}
-
 .App {
   width: 100%;
+}
+
+@media (min-width: 440px) {
+  .App {
+    display: flex;
+    gap: 1.5rem;
+  }
 }

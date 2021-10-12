@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  height: fit-content;
+
   display: flex;
   flex-direction: column;
 
@@ -29,7 +31,7 @@ export const Container = styled.div`
       flex-direction: column;
 
       margin-left: 1rem;
-      font-size: 1rem;
+      font-size: 0.8rem;
 
       .profile__name {
         font-size: 1.5rem;
@@ -66,4 +68,27 @@ export const Container = styled.div`
 
   }
 
+  @media (min-width: 440px) {
+    .profile {
+      align-items: start;
+      flex-direction: column;
+      
+      .profile__text {
+        margin: 1.5rem 0 0 0;
+      }
+    }
+    
+    .viewing__options {
+      gap: 1rem;
+      align-items: start;
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: 640px) {
+    height: calc(100% - 1.5rem);
+    .profile {
+      height: 100%;
+    }
+  }
 `;

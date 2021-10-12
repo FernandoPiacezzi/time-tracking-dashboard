@@ -98,5 +98,29 @@ export const Container = styled.div`
         color: white;
       }
     }
-  } 
+  }
+
+
+  @media (min-width: 440px) {
+    width: 100%;
+
+    .second__section {
+      align-items: start !important;
+      text-align: left;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 640px) {
+    width: 100%;
+    max-width: 200px;
+
+    .second__section {
+      align-items: start !important;
+      text-align: left;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
 `;

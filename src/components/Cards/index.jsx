@@ -3,14 +3,16 @@ import { Card } from "../Card";
 
 import { mockData } from '../../assets/mockData';
 
+import { Container } from './styles';
+
 export function Cards() {
   const [cards, setCards] = useState(mockData);
 
   return (
-    <div>
+    <Container>
       {cards?.map((card) => 
         <Card  cardProps={card} viewingOption='weekly'/>
       )}
-    </div>
+    </Container>
   )
 }
