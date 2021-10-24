@@ -33,7 +33,6 @@ body {
 #root {
   display: flex;
   padding: 1rem;
-  /* align-items: center; */
   justify-content: center;
 }
 
@@ -47,6 +46,7 @@ textarea {
 
 .App {
   width: 100%;
+  max-width: 900px;
 }
 
 @media (min-width: 440px) {
@@ -55,3 +55,16 @@ textarea {
     gap: 1.5rem;
   }
 }
+
+@media (min-width: 640px) {
+  #root {
+    align-items: center;
+    height: 100vh;
+  }
+  .App {
+    display: flex;
+    gap: 1.5rem;
+    height: fit-content;
+  }
+}
+

@@ -86,7 +86,8 @@ export const Container = styled.div`
   }
 
   @media (min-width: 640px) {
-    height: calc(100% - 1.5rem);
+    /* height: calc(100% - 1.5rem); */
+    height: auto;
     .profile {
       height: 100%;
     }
