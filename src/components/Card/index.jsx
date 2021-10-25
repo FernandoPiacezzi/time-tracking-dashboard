@@ -1,10 +1,21 @@
 import { useContext } from 'react';
+
 import { ContextAplication } from '../../context';
+
 import { Container } from './styles';
 
 export function Card({ cardProps }) {
   const { viewingOption } = useContext(ContextAplication);
-  console.log(viewingOption, cardProps);
+
+  function parseTimeOption(option) {
+    const parsedOption = {
+      daily: 'Day',
+      weekly: 'Week',
+      monthly: 'Month',
+    }
+
+    return parsedOption[option]
+  }
 
   if (!cardProps) {
     return null;
@@ -24,7 +35,7 @@ export function Card({ cardProps }) {
           </span>
 
           <span className="previous__content">
-            Last Week - {cardProps.timeframes[viewingOption].previous}hrs
+            Last {parseTimeOption(viewingOption)} - {cardProps.timeframes[viewingOption].previous}hrs
           </span>
         </section>
       </div>
